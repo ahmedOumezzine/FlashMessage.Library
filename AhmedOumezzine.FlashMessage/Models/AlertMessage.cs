@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AhmedOumezzine.FlashMessage;
+﻿namespace AhmedOumezzine.FlashMessage;
 
 /// <summary>
 /// Base Message Class.
@@ -27,37 +25,32 @@ public class AlertMessage
         _useBootstrap4 = useBS4;
     }
 
+    public AlertMessage()
+    { }
 
-    public AlertMessage() { }
-
- 
-
-    public string? Text 
+    public string? Text
     {
         get => _text;
         set => _text = value;
     }
- 
+
     public string? Title
     {
         get => _title;
         set => _title = value;
     }
 
-
     public AlertType Type
     {
         get => _type;
         set => _type = value;
     }
-   
 
     public bool Dismissible
     {
         get => _dismissible;
         set => _dismissible = value;
     }
-
 
     public bool UseBootstrap4
     {

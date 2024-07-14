@@ -1,7 +1,6 @@
 using AhmedOumezzine.FlashMessage;
 using FlashMessage.TestingApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace FlashMessage.TestingApp.Controllers
 {
@@ -35,7 +34,7 @@ namespace FlashMessage.TestingApp.Controllers
         /// <para>HTTP Method: POST</para>
         /// <para>Form submission method for Flash Message example</para>
         /// </summary>
-        /// <param name="flashMessage"><see cref="AlertMessage"/> containing parameters from submitted form.</param>        
+        /// <param name="flashMessage"><see cref="AlertMessage"/> containing parameters from submitted form.</param>
         [HttpPost("FlashMessage")]
         [ValidateAntiForgeryToken]
         public IActionResult FlashMessage([FromForm] AlertMessage flashMessage)
@@ -91,7 +90,7 @@ namespace FlashMessage.TestingApp.Controllers
             //
             // If you take a peek in Models/FormMessageViewModel.cs, you'll notice that Data
             // Attributes are put on `FirstName` and `LastName`. This is for when you submit
-            // the form without any values whatsoever; which shows off ASP.NET Core's Form 
+            // the form without any values whatsoever; which shows off ASP.NET Core's Form
             // Validation, which ties in with jQuery Validate and jQuery Validation Unobtrusive.
             //
             // We could have used Data Attribute Validation in Models/FormMessageViewModel.cs

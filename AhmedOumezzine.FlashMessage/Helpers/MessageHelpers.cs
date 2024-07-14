@@ -3,11 +3,8 @@ using System.Text;
 
 namespace AhmedOumezzine.FlashMessage;
 
-
 public static class MessageHelpers
 {
-    
-
     public static string BuildFormErrorString(List<string> modelStateErrors)
     {
         if (modelStateErrors is null || modelStateErrors.Count == 0)
@@ -18,7 +15,7 @@ public static class MessageHelpers
         sbString.Append("<ul>");
 
         foreach (var error in modelStateErrors)
-            sbString.Append($"<li>{error}</li>");        
+            sbString.Append($"<li>{error}</li>");
 
         sbString.Append("</ul>");
 
